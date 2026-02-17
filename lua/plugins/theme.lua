@@ -1,8 +1,13 @@
--- lua/plugins/rose-pine.lua
 return {
-	"rose-pine/neovim",
-	name = "rose-pine",
-	config = function()
-		vim.cmd("colorscheme rose-pine")
-	end
+  {
+    "tanvirtin/monokai.nvim",
+    lazy = false, -- Queremos que el tema se cargue al iniciar
+    priority = 1000, -- Asegura que se cargue antes que otros plugins
+    config = function()
+      -- Cargar el esquema de colores
+      require('monokai').setup({
+          palette = require('monokai').bright
+      })
+    end,
+  },
 }

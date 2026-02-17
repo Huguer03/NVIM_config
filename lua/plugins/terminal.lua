@@ -9,7 +9,7 @@ return {
       shade_terminals = true,
       shading_factor = 2,
       start_in_insert = true,
-      insert_mappings = true, -- Permite usar el atajo incluso en modo inserción
+      insert_mappings = false, -- Permite usar el atajo incluso en modo inserción
       persist_size = true,
       direction = 'horizontal', -- Se queda abajo
       close_on_exit = true,
