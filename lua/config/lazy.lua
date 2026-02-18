@@ -24,12 +24,13 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- import your plugins
     { import = "plugins" },
   },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+  install = {
+    -- El tema para el menú de instalación inicial
+    colorscheme = { "monokai", "habamax" }, 
+  },
+  checker = { enabled = false }, -- BLOQUEO: No busca actualizaciones
+  change_detection = { enabled = false }, -- BLOQUEO: No avisa de cambios
+  lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", -- Tu "seguro de vida"
 })
