@@ -85,3 +85,5 @@ vim.opt.spelllang = { "en", "es", "eu" }
 
 -- Opcional: No marcar como error palabras que empiezan con mayúscula a mitad de frase
 vim.opt.spellcapcheck = ""
+
+vim.opt.termguicolors = true

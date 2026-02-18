@@ -9,12 +9,18 @@ return {
       ts.setup({
         install_dir = vim.fn.stdpath('data') .. '/site'
       })
+    
+      ts.setup({
+          enable = true,
+          -- Desactiva el resaltado antiguo de Vim para que no haya conflictos
+          additional_vim_regex_highlighting = false,
+      })
 
       -- Instalación de lenguajes (incluyendo Quarto)
       ts.install({ 
-        "python", "fortran", "vim", "lua", "rust", 
+        "python", "vim", "lua", "rust", "fortran", "bash",
         "latex", "r", "yaml", "markdown", "markdown_inline", 
-        "dot", "bash" 
+        "dot" 
       })
 
       -- Autocomando blindado para el resaltado

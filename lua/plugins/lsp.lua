@@ -8,7 +8,7 @@ return {
     },
     config = function()
       -- 1. Iniciar Mason para gestionar los binarios
-      require("mason").setup()
+      require("mason").setup({PATH = "prepend"})
 
       -- 2. Asegurar la instalación de los servidores (incluyendo Texlab para LaTeX)
       require("mason-lspconfig").setup({
@@ -16,7 +16,6 @@ return {
           "lua_ls", 
           "pyright", 
           "texlab",        -- Soporte para LaTeX
-          "fortls",         -- Soporte para Fortran
           "rust_analyzer",  -- Soporte para Rust
 	  "marksman"
         },
